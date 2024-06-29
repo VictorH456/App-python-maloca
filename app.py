@@ -38,11 +38,17 @@ def cadastrar_remedio():
 
 def listar_remedio():
     print("Listar remédios")
+    j = 0
     for i in array_remedio:
-        print(i)
+        print(f"{j}: {i}")
+        j += 1
 
 def alterar_remedio():
     print("Alterar estado do remédio")
+    listar_remedio()
+    indice = int(input("Escolha uma opção para alterar: "))
+    nome = input("Digite um novo nome: ")
+    array_remedio[indice] = nome
 
 def sair():
     global verifica
